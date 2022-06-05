@@ -1,0 +1,25 @@
+{
+  "name": "projeto-3.2-catalogo-de-livros",
+  "version": "1.0.0",
+  "description": "Catalogo de livros",
+  "main": "index.js",
+  "scripts": {
+    "start": "index js",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevzVictor/projeto-3.2-catalogo-de-livros.git"
+  },
+  "author": "Victor Rodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevzVictor/projeto-3.2-catalogo-de-livros/issues"
+  },
+  "homepage": "https://github.com/DevzVictor/projeto-3.2-catalogo-de-livros#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
