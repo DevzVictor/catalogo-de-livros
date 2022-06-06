@@ -23,12 +23,11 @@
 
     <main>
         <section id="cardsimg">
-            <% biblioteca.forEach((livro) => { %>
             <div class="card">
-                <a href="/detalhes"><img src="<%= livro.imagem %>" alt=""></a>
+                <img src="<%= livro.imagem %>" alt="">
                 <h3><%= livro.nome %></h3>
+                <p><%= livro.resumo %></p>
             </div>
-            <% }) %>
         </section>
 
     </main>
