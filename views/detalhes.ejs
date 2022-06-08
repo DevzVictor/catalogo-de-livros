@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The book on the screen</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <nav>
         <a href="/home"><picture>
-            <source media="(max-width: 650px)" srcset="img/logo-responsiva.png">
-            <img src="img/logo.png" alt="logo">
+            <source media="(max-width: 650px)" srcset="/img/logo-responsiva.png">
+            <img src="/img/logo.png" alt="logo">
         </picture></a>
         <ul>
             <li><a href="/home">Home</a></li>
@@ -23,13 +23,12 @@
 
     <main>
         <section id="cardsimg">
-            <div class="card">
-                <img src="<%= livro.imagem %>" alt="">
-                <h3><%= livro.nome %></h3>
-                <p><%= livro.resumo %></p>
-            </div>
+                <div class="card">
+                    <img src="<%= livro.imagem %>" alt="">
+                    <h3><%= livro.nome %></h3>
+                    <p><%= livro.resumo %></p>
+                </div>
         </section>
-
     </main>
     <footer>
         <p>Todos os direitos reservador para <a target="_blank" href="https://github.com/DevzVictor">Victor</a></p>

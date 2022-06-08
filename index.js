@@ -59,6 +59,7 @@ const biblioteca = [
   },
 ];
 
+
 // ROTAS
 //READ
 app.get("/home", (req, res) => {
@@ -69,8 +70,10 @@ app.get("/cadastro", (req, res) => {
   res.render("cadastro", {biblioteca});
 });
 
-app.get("/detalhes", (req, res) => {
-  res.render("detalhes", {biblioteca});
+app.get("/detalhes/:id", (req, res) => {
+  const id = +req.params.id;
+  livro = biblioteca.find((livro) => livro.id === id);
+  res.render("detalhes", {livro});
 });
 
 //CREATE
