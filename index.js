@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -83,28 +84,5 @@ app.post("/create", (req, res) => {
   biblioteca.push(livro);
   res.redirect("/home");
 });
-
-// app.get("/detalhes/:id", (req, res) => {
-//   const id = +req.params.id;
-//   pokemon = pokedex.find(pokemon => pokemon.id === id)
-//   res.redirect("/#cadastro");
-// });
-
-// //UPDATE
-// app.post("/update/:id", (req, res) =>{
-//   const id = +req.params.id - 1;
-//   const newPokemon = req.body;
-//   newPokemon.id = id + 1;
-//   pokedex[id] = newPokemon;
-//   pokemon = undefined;
-//   res.redirect("/#cards");
-// });
-
-// //DELETE
-// app.get("/delete/:id", (req, res) => {
-//   const id = +req.params.id - 1;
-//   delete pokedex[id];
-//   res.redirect("/#cards");
-// });
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
