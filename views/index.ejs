@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The book on the screen</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <%- include('./components/head') %>
+
 </head>
+
 <body>
-    <nav>
-        <a href="/home"><picture>
-            <source media="(max-width: 650px)" srcset="img/logo-responsiva.png">
-            <img src="img/logo.png" alt="logo">
-        </picture></a>
-        <ul>
-            <li><a href="/home">Home</a></li>
-            <li><a href="/cadastro">Cadastro</a></li>
-        </ul>
-    </nav>
+
+    <%- include('./components/nav') %>
+
     <header>
+        <% if(message != null ) { %>
+            <%- include('./components/alerts') %>
+        <% } %>
     </header>
 
     <main>
         <section id="cardsimg">
+
             <% biblioteca.forEach((livro) => { %>
             <div class="card">
+
+                <div class="dropdown">
+
+                    <div class="dropdown-button">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+
+                    <div class="dropdown-content">
+                        <a id="editar" href="/getById/<%= livro.id %>/put">Editar</a>
+                        <a id="apagar" href="/getById/<%= livro.id %>/delete">Deletar</a>
+                    </div>
+
+                </div>
+                
                 <a href="/detalhes/<%= livro.id %>"><img src="<%= livro.imagem %>" alt=""></a>
                 <h3><%= livro.nome %></h3>
+                
             </div>
             <% }) %>
         </section>
-
     </main>
-    <footer>
-        <p>Todos os direitos reservador para <a target="_blank" href="https://github.com/DevzVictor">Victor</a></p>
-        <p>Dados retirados de <a target="_blank" href="https://www.amazon.com.br/s?k=48+leis+do+poder&crid=135FGU6JCQ6BW&sprefix=48%2Caps%2C310&ref=nb_sb_ss_ts-doa-p_1_2">Amazon</a></p>
-    </footer>
+
+    <% if (livroPut != null) { %>
+        <%- include('./components/modalPut') %>
+    <% } %>
+
+    <% if (livroDel != null) { %>
+        <%- include('./components/modalDel') %>
+    <% } %>
+
+    <%- include('./components/footer') %>
+
+    <script src="/js/script.js"></script>
 </body>
 </html>

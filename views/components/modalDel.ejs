@@ -1,0 +1,18 @@
+<section class="modal-overlay" id="overlay">
+    <div class="modal" id="modal">
+
+        <div class="modal-header">
+            <h3>Remover Livro</h3>
+            <a href="/" id="close-modal-put"><i class="bi bi-x-circle"></i></a>
+        </div>
+
+        <div class="modal-body">
+            <p>Tem certeza que deseja excluir o <strong><%= livroDel.nome %></strong></p>
+            <div id="btns-del">
+                <a id="no" href="/">Não</a>
+                <a id="yes" href="/remove/<%= livroDel.id %>">Sim</a>
+            </div>
+        </div>
+
+    </div>
+</section>

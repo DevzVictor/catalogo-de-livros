@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <%- include('./components/head') %>
+
+</head>
+<body>
+
+    <%- include('./components/nav') %>
+
+    <header>
+        <% if(message != null ) { %>
+            <%- include('./components/alerts') %>
+        <% } %>
+    </header>
+
+    <main>
+        <section id="cadastro">
+            <h2>Cadastre um novo Livro!</h2>
+            <form action="/create" method="post">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+
+                <label for="imagem">Link da Imagem</label>
+                <input type="text" name="imagem" id="imagem">
+
+                <label for="resumo">Resumo:</label>
+                <input type="text" name="resumo" id="resumo">
+
+                <button id="btnCadastrar" type="submit">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include('./components/footer') %>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>

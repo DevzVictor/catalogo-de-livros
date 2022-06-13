@@ -1,0 +1,26 @@
+<section class="modal-overlay" id="overlay">
+    <div class="modal" id="modal">
+
+        <div class="modal-header">
+            <h3>Atualizar Livro</h3>
+            <a href="/" id="close-modal-put"><i class="bi bi-x-circle"></i></a>
+        </div>
+
+        <div class="modal-body">
+            <form class="form-modal" action="/update/<%= livroPut.id %>" method="post">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" value="<%= livroPut.nome %>">
+
+                <label for="imagem">Link da Imagem</label>
+                <input type="text" name="imagem" id="imagem" value="<%= livroPut.imagem %>">
+
+                <label for="resumo">Resumo:</label>
+                <input type="text" name="resumo" id="resumo" value="<%= livroPut.resumo %>">
+
+                <button type="submit">Atualizar</button>
+            </form>
+        </div>
+
+    </div>
+</section>
