@@ -31,4 +31,10 @@ const Livro = connection.define(
   }
 );
 
+const initTable = async () => {
+  await Livro.sync();
+};
+
+initTable();
+
 module.exports = Livro;
