@@ -2,7 +2,7 @@
 
  # Catalogo de Livros
 
- Neste projeto você pode cadastrar livros.
+ Neste projeto foi feito uma pagina web onde você pode cadastrar livros.
 
  ## 🚀 Começando
 
